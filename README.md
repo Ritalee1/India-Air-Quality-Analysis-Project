@@ -51,4 +51,4 @@ This project is licensed under the MIT License.
 Pull requests are welcome! For major changes, please open an issue first to discuss.
 
 ## **Contact**
-For questions or collaboration, contact **[Your Name]** at **your.email@example.com**.
+For questions or collaboration, contact **Ritalee Monde** at **pamsmonde@gmail.com**.
