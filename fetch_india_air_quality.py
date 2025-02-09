@@ -80,8 +80,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-get_ipython().run_line_magic('matplotlib', 'inline')
-
 # Load the air quality data from the CSV
 df = pd.read_csv("india_air_quality.csv")
 
