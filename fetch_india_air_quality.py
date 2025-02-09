@@ -197,7 +197,25 @@ plt.show()
 # In[39]:
 
 
-plt.figure(figsize=(10,6))
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load data
+df = pd.read_csv("india_air_quality.csv")
+
+# ✅ Drop non-numeric columns like 'datetime' before correlation
+if 'datetime' in df.columns:
+    df = df.drop(columns=['datetime'])
+
+# ✅ Ensure all remaining columns are numeric
+df = df.select_dtypes(include=['number'])  # Keeps only numeric columns
+
+# ✅ Fix: Handle NaN values
+df.fillna(0, inplace=True)  # Replace NaN with 0
+
+# ✅ Generate Heatmap
+plt.figure(figsize=(10, 6))
 sns.heatmap(df.corr(), annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
 plt.title("Correlation Between Pollutants")
 plt.show()
